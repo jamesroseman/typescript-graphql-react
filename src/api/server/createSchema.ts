@@ -1,11 +1,14 @@
 import 'reflect-metadata';
 import { GraphQLSchema } from 'graphql';
-import { buildSchema } from 'type-graphql';
+import { buildSchemaSync } from 'type-graphql';
 
 import FindMaxResolver from '../resolvers/FindMaxResolver';
 
-export default async function createSchema(): Promise<GraphQLSchema> {
-  return buildSchema({
+/**
+ * Generates a GraphQL schema.
+ */
+export default function createSchema(): GraphQLSchema {
+  return buildSchemaSync({
     resolvers: [
       FindMaxResolver,
     ],

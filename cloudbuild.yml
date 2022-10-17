@@ -1,0 +1,25 @@
+steps:
+# Install the local dependencies
+- name: 'gcr.io/cloud-builders/npm'
+  args:
+  - ci
+  - --production
+# Compile the Typescript Code into Javascript
+- name: 'gcr.io/cloud-builders/npm'
+  args:
+  - run
+  - build
+
+##  CLOUD FUNCTIONS ARE DEFINED BELOW ##
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - graphql
+  - --source=build
+  - --trigger-http
+  - --runtime=nodejs14
+  - --memory=1024MB
+  - --timeout=120
+  - --allow-unauthenticated

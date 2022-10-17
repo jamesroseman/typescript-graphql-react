@@ -8,9 +8,12 @@ export type APIServer = {
   app: Express;
 }
 
+/**
+ * Generates and starts an ApolloServer used for serving GraphQL requests.
+ */
 export default async function createServer(): Promise<APIServer> {
   const app = express();
-  const schema = await createSchema();
+  const schema = createSchema();
   const apolloServer = new ApolloServer({ schema, introspection: true });
   await apolloServer.start();
   await apolloServer.applyMiddleware({ app, path: '/' });
