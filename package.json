@@ -4,6 +4,7 @@
   "description": "Boilerplate code for a GraphQL/React app written entirely in Typescript with shared types.",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf build/ && tsc && cp package.json build/",
     "start:api": "ts-node src/api/index.ts",
     "test": "jest",
     "test:ci": "npm run test && npm run lint",
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "apollo-server-cloud-functions": "^3.10.3",
+    "apollo-server-core": "^3.10.3",
     "apollo-server-express": "^3.10.3",
     "apollo-server-types": "^3.6.3",
     "class-validator": "^0.13.2",
