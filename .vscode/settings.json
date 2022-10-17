@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    "yarn.lock": true,
+    "tsconfig.json": true,
+    "jest.config.js": true,
+    ".gitignore": true,
+    ".eslintignore": true,
+    ".eslintrc.json": false,
+  },
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
+}

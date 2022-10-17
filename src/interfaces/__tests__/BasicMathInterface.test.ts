@@ -1,6 +1,6 @@
-import BasicMath from "../BasicMathInterface";
+import BasicMath from '../BasicMathInterface';
 
-describe('BasicMathInterface', () => {
+describe('BasicMathInterface (Unit)', () => {
   let basicMath: BasicMath;
 
   beforeEach(() => {
