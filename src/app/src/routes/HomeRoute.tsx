@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+/* eslint-disable no-undef */
 import { Query } from 'react-apollo';
+import React, { useState } from 'react';
 
+import NumberSelector from '../components/NumberSelectorComponent';
 import styles from './HomeRoute.module.css';
 import { FindMaxQuery, FindMaxQueryResponse } from '../queries/FindMaxQuery';
-import NumberSelector from '../components/NumberSelectorComponent';
 
 export type HomeRouteProps = {
 
@@ -13,7 +14,7 @@ export default function HomeRoute() {
   const [numbers, setNumbers] = useState<number[]>([]);
 
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
       <div className={styles['number-selector']}>
         <NumberSelector onNumbersChange={setNumbers} />
       </div>
@@ -21,7 +22,7 @@ export default function HomeRoute() {
         {renderQuery(numbers)}
       </div>
     </div>
-  )
+  );
 }
 
 function renderQuery(numbers: number[]): JSX.Element {
@@ -31,9 +32,8 @@ function renderQuery(numbers: number[]): JSX.Element {
         {renderFromResponse}
       </Query>
     );
-  } else {
-    return <p>Maximum:</p>;
   }
+  return <p>Maximum:</p>;
 }
 
 function renderFromResponse(response: FindMaxQueryResponse): JSX.Element {

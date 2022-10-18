@@ -20,5 +20,6 @@ src/app/.env.development.local
 src/app/.env.test.local
 src/app/.env.production.local
 src/app/npm-debug.log*
+src/app/yarn.lock
 src/app/yarn-debug.log*
 src/app/yarn-error.log*
