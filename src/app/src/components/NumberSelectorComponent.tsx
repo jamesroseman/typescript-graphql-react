@@ -17,9 +17,9 @@ export default function NumberSelector({
       const rawNumbersStr: string = e.target.value;
       const rawNumbers: string[] = rawNumbersStr
         .split(',')
-        .filter((s: string) => s !== "");
+        .filter((s: string) => s !== '');
       const isValid: boolean = rawNumbers.reduce(
-        (acc: boolean, rawNum: string) => acc && !Number.isNaN(parseInt(rawNum)),
+        (acc: boolean, rawNum: string) => acc && !Number.isNaN(parseInt(rawNum, 10)),
         true,
       );
       if (isValid) {
@@ -31,20 +31,21 @@ export default function NumberSelector({
         setError('Please input a comma-separated list of numbers without spaces.');
       }
     }
-  }
+  };
 
   const renderError = () => {
     if (error !== '') {
-      return <p>{error}</p>
+      return <p>{error}</p>;
     }
-  }
+    return <p></p>;
+  };
 
   return (
-    <div className={styles['container']}>
-      <div className={styles['input']}>
+    <div className={styles.container}>
+      <div className={styles.input}>
         <input onChange={setNumbersFromChange} />
       </div>
-      <div className={styles['body']}>
+      <div className={styles.body}>
         {error === '' ? numbers.join(' ') : renderError()}
       </div>
     </div>

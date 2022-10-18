@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  Navigate,
   Route,
+  BrowserRouter as Router,
   Routes,
-  Navigate
 } from 'react-router-dom';
 
-import styles from './App.module.css';
 import HomeRoute from './routes/HomeRoute';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
       <Router>
         <Routes>
           <Route path='/' element={<HomeRoute />} />

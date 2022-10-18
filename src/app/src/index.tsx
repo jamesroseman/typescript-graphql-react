@@ -4,9 +4,10 @@ import { createRoot } from 'react-dom/client';
 
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import client from './lib/apollo';
+import reportWebVitals from './reportWebVitals';
 
+// eslint-disable-next-line no-undef
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
@@ -14,7 +15,7 @@ root.render(
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
-  </div>
+  </div>,
 );
 
 // If you want to start measuring performance in your app, pass a function
