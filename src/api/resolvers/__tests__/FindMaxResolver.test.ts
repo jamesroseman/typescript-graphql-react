@@ -3,7 +3,7 @@ import { GraphQLResponse } from 'apollo-server-types';
 import gql from 'graphql-tag';
 import { ApolloServer, ExpressContext } from 'apollo-server-express';
 
-import { FindMaxResolverResponse } from '../FindMaxResolver';
+import { FindMaxResolverResponse } from '../../../shared/types/api/FindMaxResolverTypes';
 import createServer, { APIServer } from '../../server/createServer';
 
 describe('FindMaxResolver (Unit)', () => {

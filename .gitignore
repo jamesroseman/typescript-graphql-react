@@ -1,3 +1,24 @@
+# config files
+credentials/*.json
+
+# api files
 node_modules/
 build/
-credentials/*.json
+
+# app files
+buildapp/
+src/app/node_modules/
+src/app/src/types/
+src/app/.env
+src/app/.pnp
+src/app/.pnp.js
+src/app/coverage/
+src/app/build/
+src/app/.DS_Store
+src/app/.env.local
+src/app/.env.development.local
+src/app/.env.test.local
+src/app/.env.production.local
+src/app/npm-debug.log*
+src/app/yarn-debug.log*
+src/app/yarn-error.log*

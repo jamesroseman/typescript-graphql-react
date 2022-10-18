@@ -1,20 +1,9 @@
 import {
-  Args, ArgsType, Field, ObjectType, Query, Resolver,
+  Args, Query, Resolver,
 } from 'type-graphql';
 
-import BasicMath from '../../interfaces/BasicMathInterface';
-
-@ArgsType()
-export class FindMaxResolverArgs {
-  @Field(() => [Number])
-    nums: number[];
-}
-
-@ObjectType()
-export class FindMaxResolverResponse {
-  @Field(() => Number)
-    max: number;
-}
+import BasicMath from '../../shared/interfaces/BasicMathInterface';
+import { FindMaxResolverArgs, FindMaxResolverResponse } from '../../shared/types/api/FindMaxResolverTypes';
 
 interface IFindMaxResolver {
   findMax(args: FindMaxResolverArgs): FindMaxResolverResponse,
