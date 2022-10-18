@@ -6,10 +6,19 @@
     "jest.config.js": true,
     ".gitignore": true,
     ".eslintignore": true,
-    ".eslintrc.json": false,
+    ".eslintrc.json": true,
+    "build": true,
+    "buildapp/": true,
+    "src/app/node_modules/": true,
+    "src/app/src/shared/": true,
+    "src/app/src/.env": true,
+    "src/app/package.json": true,
+    "src/app/package-lock.json": true,
+    "src/app/yarn.lock": true,
+    "src/app/tsconfig.json": true,
   },
   "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": ["javascript","typescript"]
 }
