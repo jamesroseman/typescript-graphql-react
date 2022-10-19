@@ -12,7 +12,7 @@ interface IFindMaxResolver {
 @Resolver()
 export default class FindMaxResolver implements IFindMaxResolver {
   @Query(() => FindMaxResolverResponse)
-  findMax(@Args() {
+  findMax(@Args(() => FindMaxResolverArgs) {
     nums,
   }: FindMaxResolverArgs): FindMaxResolverResponse {
     const basicMath: BasicMath = new BasicMath();
