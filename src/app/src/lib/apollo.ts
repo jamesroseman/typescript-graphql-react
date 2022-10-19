@@ -5,15 +5,7 @@ const apiUrl: string | undefined = process.env.REACT_APP_GRAPHQL_API_URL;
 if (apiUrl === undefined) {
   throw new Error('Cannot find GraphQL API url [ REACT_APP_GRAPHQL_API_URL ] in env.');
 }
-const apiPortStr: string | undefined = process.env.REACT_APP_GRAPHQL_API_PORT;
-if (apiPortStr === undefined) {
-  throw new Error('Cannot find GraphQL API port [ REACT_APP_GRAPHQL_API_PORT ] in env.');
-}
-const apiPort: number = parseInt(apiPortStr, 10);
-if (Number.isNaN(apiPort)) {
-  throw new Error('Provided GraphQL API port not a number [ REACT_APP_GRAPHQL_API_PORT ].');
-}
-const uri: string = !apiUrl.startsWith('http') ? `http://${apiUrl}:${apiPort}` : `${apiUrl}`;
+const uri: string = !apiUrl.startsWith('http') ? `http://${apiUrl}` : `${apiUrl}`;
 
 // eslint-disable-next-line no-console
 console.log(`[x] Connected to GraphQL API at: ${uri}`);

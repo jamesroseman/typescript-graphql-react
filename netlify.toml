@@ -1,3 +1,7 @@
+[build]
+  publish = "buildapp/"
+  command = "npm run build:app"
+
 [functions]
   directory = "src/functions"
 [[redirects]]
