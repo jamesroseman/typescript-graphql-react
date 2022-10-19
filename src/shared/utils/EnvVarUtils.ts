@@ -33,35 +33,4 @@ export class EnvVarUtils {
     }
     return port;
   }
-
-  /**
-   * Gets the desired URL of the GraphQL API for the React app.
-   */
-  static getReactApiUrl(): string {
-    const graphqlAPIUrl: string | undefined = process.env.REACT_APP_GRAPHQL_API_URL;
-    if (graphqlAPIUrl === undefined) {
-      const graphqlAPIUrlNotFoundError: Error = new Error(
-        'React App GraphQL API URL [REACT_APP_GRAPHQL_API_URL] not found in env',
-      );
-      graphqlAPIUrlNotFoundError.name = 'Undefined GraphQL API URL.';
-      throw graphqlAPIUrlNotFoundError;
-    }
-    return graphqlAPIUrl;
-  }
-
-  /**
-   * Gets the desired port of the GraphQL API for the React app.
-   */
-  static getReactApiPort(): number {
-    const graphqlAPIPort: string | undefined = process.env.REACT_APP_GRAPHQL_API_PORT;
-    const port: number = parseInt(graphqlAPIPort ?? '', 10);
-    if (graphqlAPIPort === undefined || Number.isNaN(port)) {
-      const graphqlAPIPortNotFoundError: Error = new Error(
-        'React App GraphQL API port [REACT_APP_GRAPHQL_API_PORT] not found in env',
-      );
-      graphqlAPIPortNotFoundError.name = 'Undefined GraphQL API port.';
-      throw graphqlAPIPortNotFoundError;
-    }
-    return port;
-  }
 }

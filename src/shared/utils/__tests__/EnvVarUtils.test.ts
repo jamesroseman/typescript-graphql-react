@@ -51,38 +51,4 @@ describe('EnvVarUtils (Unit)', () => {
       expect(() => { EnvVarUtils.getApiPort(); }).toThrow();
     });
   });
-
-  describe('getReactApiUrl', () => {
-    const apiUrl: string = 'react-api-url';
-
-    test('successfully gets React API url', () => {
-      process.env = {
-        ...emptyEnv,
-        REACT_APP_GRAPHQL_API_URL: apiUrl,
-      };
-      expect(EnvVarUtils.getReactApiUrl()).toBe(apiUrl);
-    });
-
-    test('throws error if React API url is missing', () => {
-      process.env = { ...emptyEnv };
-      expect(() => { EnvVarUtils.getReactApiUrl(); }).toThrow();
-    });
-  });
-
-  describe('getReactApiPort', () => {
-    const apiPort: number = 5894;
-
-    test('successfully gets React API url', () => {
-      process.env = {
-        ...emptyEnv,
-        REACT_APP_GRAPHQL_API_PORT: `${apiPort}`,
-      };
-      expect(EnvVarUtils.getReactApiPort()).toBe(apiPort);
-    });
-
-    test('throws error if React API url is missing', () => {
-      process.env = { ...emptyEnv };
-      expect(() => { EnvVarUtils.getReactApiPort(); }).toThrow();
-    });
-  });
 });
