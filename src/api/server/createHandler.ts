@@ -4,7 +4,7 @@ import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import createSchema from './createSchema';
 
 /**
- * Generates a handler for an ApolloServer instance, used primarily for serverless hosting.
+ * Generates a handler for an ApolloServer instance, used primarily for Google Cloud serverless hosting.
  */
 export default function createHandler() {
   const schema = createSchema();

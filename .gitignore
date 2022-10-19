@@ -23,3 +23,6 @@ src/app/npm-debug.log*
 src/app/yarn.lock
 src/app/yarn-debug.log*
 src/app/yarn-error.log*
+
+# Local Netlify folder
+.netlify
