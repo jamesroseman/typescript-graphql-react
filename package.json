@@ -28,7 +28,7 @@
     "url": "git+https://github.com/jamesroseman/typescript-graphql-react.git"
   },
   "author": "James Roseman",
-  "license": "MIT",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/jamesroseman/typescript-graphql-react/issues"
   },

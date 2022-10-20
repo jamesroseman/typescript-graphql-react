@@ -2,7 +2,7 @@
   "files.exclude": {
     "node_modules/": true,
     "yarn.lock": true,
-    "tsconfig.json": true,
+    "tsconfig.json": false,
     "jest.config.js": true,
     ".gitignore": true,
     ".eslintignore": true,
